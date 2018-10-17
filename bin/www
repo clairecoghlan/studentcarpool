@@ -7,17 +7,17 @@
 var app = require('../app');
 var debug = require('debug')('studentcarpool:server');
 var http = require('http');
+ 
 
-
-/** Create connection to mySQL DB 
-*/
-
-var mysql = require('mysql');
+ /** connect to myql
+ */
+ var mysql = require('mysql');
 
 var con = mysql.createConnection({
   host: "localhost",
-  user: "root", // changed to DB connection user name 
-  password: "password" // Changed to password paired with DB connection
+  user: "root",
+  password: "password",
+  database: "mydb"
 });
 
 con.connect(function(err) {
